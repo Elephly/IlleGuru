@@ -37,6 +37,12 @@ namespace IlleGuru
                     }
                     else
                     {
+                        int trackNumber = 0;
+                        if (Int32.TryParse(songName.Split(' ')[0].TrimEnd('.'), out trackNumber))
+                        {
+                            songName = songName.Substring(songName.IndexOf(' ')).Trim();
+                        }
+
                         songName = songName.Replace("Electronic -- ", "");
                         songName = songName.Replace("Electro Funk -- ", "");
                         songName = songName.Replace("Electro House -- ", "");
@@ -125,6 +131,10 @@ namespace IlleGuru
 
                         using (TagLib.File f = TagLib.File.Create(path))
                         {
+                            if (trackNumber > 0)
+                            {
+                                f.Tag.Track = (uint)trackNumber;
+                            }
                             f.Tag.Title = songTitle.Trim();
                             f.Tag.Comment = comment.Trim();
                             f.Tag.Performers = songArtists.ToArray();

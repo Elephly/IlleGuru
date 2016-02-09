@@ -37,8 +37,10 @@ namespace IlleGuru
                     }
                     else
                     {
+                        string[] songNameTokens = songName.Split(' ');
+
                         int trackNumber = 0;
-                        if (Int32.TryParse(songName.Split(' ')[0].TrimEnd('.'), out trackNumber))
+                        if (songNameTokens[0].EndsWith(".") && Int32.TryParse(songNameTokens[0].TrimEnd('.'), out trackNumber))
                         {
                             songName = songName.Substring(songName.IndexOf(' ')).Trim();
                         }

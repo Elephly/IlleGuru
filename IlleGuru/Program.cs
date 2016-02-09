@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace IlleGuru
+﻿namespace IlleGuru
 {
     class Program
     {

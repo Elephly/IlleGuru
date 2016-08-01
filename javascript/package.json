@@ -1,0 +1,27 @@
+{
+  "name": "illeguru",
+  "version": "0.0.1",
+  "description": "Tool for parsing the names of music files to fill in basic metadata.",
+  "main": "IlleGuru.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elephly/IlleGuru.git"
+  },
+  "keywords": [
+    "mp3",
+    "metadata",
+    "parse"
+  ],
+  "author": "omer@namnamnamnam.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elephly/IlleGuru/issues"
+  },
+  "homepage": "https://github.com/Elephly/IlleGuru#readme",
+  "dependencies": {
+    "ffmetadata": "^1.4.0"
+  }
+}
